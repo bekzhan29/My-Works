@@ -58,19 +58,12 @@ namespace ConsoleApplication5
             c.size = a.size + b.size;
             for (int i = 1; i <= a.size; i++)
                 for (int j = 1; j <= b.size; j++)
-                    try
-                    {
-                        c.a[i + j - 1] += a.a[i] * b.a[j];
-                    }
-                    catch (Exception e)
-                    {
-                        Console.WriteLine(e.Message);
-                    }
+                    c.a[i + j - 1] += a.a[i] * b.a[j];
             for (int i = 1; i <= c.size; i++)
                 if (c.a[i] > 9)
                 {
-                    c.a[i] -= 10;
-                    c.a[i + 1]++;
+                    c.a[i + 1] += c.a[i] / 10;
+                    c.a[i] %= 10;
                     if (i == c.size)
                         c.size++;
                 }
