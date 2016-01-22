@@ -1,0 +1,6 @@
+c:\users\бекжан\documents\visual studio 2015\Projects\ConsoleApplication7\ConsoleApplication7\bin\Debug\ConsoleApplication7.exe.config
+c:\users\бекжан\documents\visual studio 2015\Projects\ConsoleApplication7\ConsoleApplication7\obj\Debug\ConsoleApplication7.csprojResolveAssemblyReference.cache
+c:\users\бекжан\documents\visual studio 2015\Projects\ConsoleApplication7\ConsoleApplication7\bin\Debug\ConsoleApplication7.exe
+c:\users\бекжан\documents\visual studio 2015\Projects\ConsoleApplication7\ConsoleApplication7\bin\Debug\ConsoleApplication7.pdb
+c:\users\бекжан\documents\visual studio 2015\Projects\ConsoleApplication7\ConsoleApplication7\obj\Debug\ConsoleApplication7.exe
+c:\users\бекжан\documents\visual studio 2015\Projects\ConsoleApplication7\ConsoleApplication7\obj\Debug\ConsoleApplication7.pdb
