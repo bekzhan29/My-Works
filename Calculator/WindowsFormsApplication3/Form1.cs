@@ -64,19 +64,12 @@ namespace WindowsFormsApplication3
                 c.size = a.size + b.size;
                 for (int i = 1; i <= a.size; i++)
                     for (int j = 1; j <= b.size; j++)
-                        try
-                        {
-                            c.a[i + j - 1] += a.a[i] * b.a[j];
-                        }
-                        catch (Exception e)
-                        {
-                            Console.WriteLine(e.Message);
-                        }
+                        c.a[i + j - 1] += a.a[i] * b.a[j];
                 for (int i = 1; i <= c.size; i++)
                     if (c.a[i] > 9)
                     {
-                        c.a[i] -= 10;
-                        c.a[i + 1]++;
+                        c.a[i + 1] += c.a[i] / 10;
+                        c.a[i] %= 10;
                         if (i == c.size)
                             c.size++;
                     }
@@ -94,7 +87,8 @@ namespace WindowsFormsApplication3
         }
 
         bigint last = new bigint();
-        int oper;
+        bigint latest = new bigint();
+        int oper, loper;
 
         public calc()
         {
@@ -210,23 +204,52 @@ namespace WindowsFormsApplication3
             {
                 last += b;
                 calctxt.Text = last.ToString();
+                latest = b;
+                loper = oper;
             }
             if (oper == 2)
             {
                 last -= b;
                 calctxt.Text = last.ToString();
+                latest = b;
+                loper = oper;
             }
             if (oper == 3)
             {
                 last *= b;
                 calctxt.Text = last.ToString();
+                latest = b;
+                loper = oper;
             }
+            if (oper == 4)
+            {
+                if (loper == 1)
+                {
+                    last += latest;
+                    calctxt.Text = last.ToString();
+                }
+                if (loper == 2)
+                {
+                    last -= latest;
+                    calctxt.Text = last.ToString();
+                }
+                if(loper==3)
+                {
+                    last *= latest;
+                    calctxt.Text = last.ToString();
+                }
+            }
+            oper = 4;
         }
 
         private void calc_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-                equal_Click(sender, e);
+            if (e.KeyCode == Keys.Multiply)
+                mul_Click(sender, e);
+            if (e.KeyCode == Keys.Add)
+                add_Click(sender, e);
+            if (e.KeyCode == Keys.Subtract)
+                sub_Click(sender, e);
             if (e.KeyCode == Keys.NumPad0)
                 zero_Click(sender, e);
             if (e.KeyCode == Keys.NumPad1)
@@ -247,8 +270,6 @@ namespace WindowsFormsApplication3
                 eight_Click(sender, e);
             if (e.KeyCode == Keys.NumPad9)
                 nine_Click(sender, e);
-            if (e.KeyCode == Keys.Enter)
-                equal_Click(sender, e);
             if (e.KeyCode == Keys.D0)
                 zero_Click(sender, e);
             if (e.KeyCode == Keys.D1)
@@ -273,8 +294,12 @@ namespace WindowsFormsApplication3
 
         private void calctxt_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-                equal_Click(sender, e);
+            if (e.KeyCode == Keys.Multiply)
+                mul_Click(sender, e);
+            if (e.KeyCode == Keys.Add)
+                add_Click(sender, e);
+            if (e.KeyCode == Keys.Subtract)
+                sub_Click(sender, e);
             if (e.KeyCode == Keys.NumPad0)
                 zero_Click(sender, e);
             if (e.KeyCode == Keys.NumPad1)
@@ -295,8 +320,6 @@ namespace WindowsFormsApplication3
                 eight_Click(sender, e);
             if (e.KeyCode == Keys.NumPad9)
                 nine_Click(sender, e);
-            if (e.KeyCode == Keys.Enter)
-                equal_Click(sender, e);
             if (e.KeyCode == Keys.D0)
                 zero_Click(sender, e);
             if (e.KeyCode == Keys.D1)
@@ -321,8 +344,12 @@ namespace WindowsFormsApplication3
 
         private void clear_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-                equal_Click(sender, e);
+            if (e.KeyCode == Keys.Multiply)
+                mul_Click(sender, e);
+            if (e.KeyCode == Keys.Add)
+                add_Click(sender, e);
+            if (e.KeyCode == Keys.Subtract)
+                sub_Click(sender, e);
             if (e.KeyCode == Keys.NumPad0)
                 zero_Click(sender, e);
             if (e.KeyCode == Keys.NumPad1)
@@ -343,8 +370,6 @@ namespace WindowsFormsApplication3
                 eight_Click(sender, e);
             if (e.KeyCode == Keys.NumPad9)
                 nine_Click(sender, e);
-            if (e.KeyCode == Keys.Enter)
-                equal_Click(sender, e);
             if (e.KeyCode == Keys.D0)
                 zero_Click(sender, e);
             if (e.KeyCode == Keys.D1)
@@ -369,8 +394,12 @@ namespace WindowsFormsApplication3
 
         private void mul_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-                equal_Click(sender, e);
+            if (e.KeyCode == Keys.Multiply)
+                mul_Click(sender, e);
+            if (e.KeyCode == Keys.Add)
+                add_Click(sender, e);
+            if (e.KeyCode == Keys.Subtract)
+                sub_Click(sender, e);
             if (e.KeyCode == Keys.NumPad0)
                 zero_Click(sender, e);
             if (e.KeyCode == Keys.NumPad1)
@@ -391,8 +420,6 @@ namespace WindowsFormsApplication3
                 eight_Click(sender, e);
             if (e.KeyCode == Keys.NumPad9)
                 nine_Click(sender, e);
-            if (e.KeyCode == Keys.Enter)
-                equal_Click(sender, e);
             if (e.KeyCode == Keys.D0)
                 zero_Click(sender, e);
             if (e.KeyCode == Keys.D1)
@@ -417,8 +444,12 @@ namespace WindowsFormsApplication3
 
         private void sub_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-                equal_Click(sender, e);
+            if (e.KeyCode == Keys.Multiply)
+                mul_Click(sender, e);
+            if (e.KeyCode == Keys.Add)
+                add_Click(sender, e);
+            if (e.KeyCode == Keys.Subtract)
+                sub_Click(sender, e);
             if (e.KeyCode == Keys.NumPad0)
                 zero_Click(sender, e);
             if (e.KeyCode == Keys.NumPad1)
@@ -439,8 +470,6 @@ namespace WindowsFormsApplication3
                 eight_Click(sender, e);
             if (e.KeyCode == Keys.NumPad9)
                 nine_Click(sender, e);
-            if (e.KeyCode == Keys.Enter)
-                equal_Click(sender, e);
             if (e.KeyCode == Keys.D0)
                 zero_Click(sender, e);
             if (e.KeyCode == Keys.D1)
@@ -465,8 +494,12 @@ namespace WindowsFormsApplication3
 
         private void seven_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-                equal_Click(sender, e);
+            if (e.KeyCode == Keys.Multiply)
+                mul_Click(sender, e);
+            if (e.KeyCode == Keys.Add)
+                add_Click(sender, e);
+            if (e.KeyCode == Keys.Subtract)
+                sub_Click(sender, e);
             if (e.KeyCode == Keys.NumPad0)
                 zero_Click(sender, e);
             if (e.KeyCode == Keys.NumPad1)
@@ -487,8 +520,6 @@ namespace WindowsFormsApplication3
                 eight_Click(sender, e);
             if (e.KeyCode == Keys.NumPad9)
                 nine_Click(sender, e);
-            if (e.KeyCode == Keys.Enter)
-                equal_Click(sender, e);
             if (e.KeyCode == Keys.D0)
                 zero_Click(sender, e);
             if (e.KeyCode == Keys.D1)
@@ -513,8 +544,12 @@ namespace WindowsFormsApplication3
 
         private void eight_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-                equal_Click(sender, e);
+            if (e.KeyCode == Keys.Multiply)
+                mul_Click(sender, e);
+            if (e.KeyCode == Keys.Add)
+                add_Click(sender, e);
+            if (e.KeyCode == Keys.Subtract)
+                sub_Click(sender, e);
             if (e.KeyCode == Keys.NumPad0)
                 zero_Click(sender, e);
             if (e.KeyCode == Keys.NumPad1)
@@ -535,8 +570,6 @@ namespace WindowsFormsApplication3
                 eight_Click(sender, e);
             if (e.KeyCode == Keys.NumPad9)
                 nine_Click(sender, e);
-            if (e.KeyCode == Keys.Enter)
-                equal_Click(sender, e);
             if (e.KeyCode == Keys.D0)
                 zero_Click(sender, e);
             if (e.KeyCode == Keys.D1)
@@ -561,8 +594,12 @@ namespace WindowsFormsApplication3
 
         private void add_KeyDown_1(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-                equal_Click(sender, e);
+            if (e.KeyCode == Keys.Multiply)
+                mul_Click(sender, e);
+            if (e.KeyCode == Keys.Add)
+                add_Click(sender, e);
+            if (e.KeyCode == Keys.Subtract)
+                sub_Click(sender, e);
             if (e.KeyCode == Keys.NumPad0)
                 zero_Click(sender, e);
             if (e.KeyCode == Keys.NumPad1)
@@ -583,8 +620,6 @@ namespace WindowsFormsApplication3
                 eight_Click(sender, e);
             if (e.KeyCode == Keys.NumPad9)
                 nine_Click(sender, e);
-            if (e.KeyCode == Keys.Enter)
-                equal_Click(sender, e);
             if (e.KeyCode == Keys.D0)
                 zero_Click(sender, e);
             if (e.KeyCode == Keys.D1)
@@ -609,8 +644,12 @@ namespace WindowsFormsApplication3
 
         private void equal_KeyDown_1(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-                equal_Click(sender, e);
+            if (e.KeyCode == Keys.Multiply)
+                mul_Click(sender, e);
+            if (e.KeyCode == Keys.Add)
+                add_Click(sender, e);
+            if (e.KeyCode == Keys.Subtract)
+                sub_Click(sender, e);
             if (e.KeyCode == Keys.NumPad0)
                 zero_Click(sender, e);
             if (e.KeyCode == Keys.NumPad1)
@@ -631,8 +670,6 @@ namespace WindowsFormsApplication3
                 eight_Click(sender, e);
             if (e.KeyCode == Keys.NumPad9)
                 nine_Click(sender, e);
-            if (e.KeyCode == Keys.Enter)
-                equal_Click(sender, e);
             if (e.KeyCode == Keys.D0)
                 zero_Click(sender, e);
             if (e.KeyCode == Keys.D1)
@@ -657,8 +694,12 @@ namespace WindowsFormsApplication3
 
         private void nine_KeyDown_1(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-                equal_Click(sender, e);
+            if (e.KeyCode == Keys.Multiply)
+                mul_Click(sender, e);
+            if (e.KeyCode == Keys.Add)
+                add_Click(sender, e);
+            if (e.KeyCode == Keys.Subtract)
+                sub_Click(sender, e);
             if (e.KeyCode == Keys.NumPad0)
                 zero_Click(sender, e);
             if (e.KeyCode == Keys.NumPad1)
@@ -679,8 +720,6 @@ namespace WindowsFormsApplication3
                 eight_Click(sender, e);
             if (e.KeyCode == Keys.NumPad9)
                 nine_Click(sender, e);
-            if (e.KeyCode == Keys.Enter)
-                equal_Click(sender, e);
             if (e.KeyCode == Keys.D0)
                 zero_Click(sender, e);
             if (e.KeyCode == Keys.D1)
@@ -705,8 +744,12 @@ namespace WindowsFormsApplication3
 
         private void six_KeyDown_1(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-                equal_Click(sender, e);
+            if (e.KeyCode == Keys.Multiply)
+                mul_Click(sender, e);
+            if (e.KeyCode == Keys.Add)
+                add_Click(sender, e);
+            if (e.KeyCode == Keys.Subtract)
+                sub_Click(sender, e);
             if (e.KeyCode == Keys.NumPad0)
                 zero_Click(sender, e);
             if (e.KeyCode == Keys.NumPad1)
@@ -727,8 +770,6 @@ namespace WindowsFormsApplication3
                 eight_Click(sender, e);
             if (e.KeyCode == Keys.NumPad9)
                 nine_Click(sender, e);
-            if (e.KeyCode == Keys.Enter)
-                equal_Click(sender, e);
             if (e.KeyCode == Keys.D0)
                 zero_Click(sender, e);
             if (e.KeyCode == Keys.D1)
@@ -753,8 +794,12 @@ namespace WindowsFormsApplication3
 
         private void five_KeyDown_1(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-                equal_Click(sender, e);
+            if (e.KeyCode == Keys.Multiply)
+                mul_Click(sender, e);
+            if (e.KeyCode == Keys.Add)
+                add_Click(sender, e);
+            if (e.KeyCode == Keys.Subtract)
+                sub_Click(sender, e);
             if (e.KeyCode == Keys.NumPad0)
                 zero_Click(sender, e);
             if (e.KeyCode == Keys.NumPad1)
@@ -775,8 +820,6 @@ namespace WindowsFormsApplication3
                 eight_Click(sender, e);
             if (e.KeyCode == Keys.NumPad9)
                 nine_Click(sender, e);
-            if (e.KeyCode == Keys.Enter)
-                equal_Click(sender, e);
             if (e.KeyCode == Keys.D0)
                 zero_Click(sender, e);
             if (e.KeyCode == Keys.D1)
@@ -801,8 +844,12 @@ namespace WindowsFormsApplication3
 
         private void four_KeyDown_1(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-                equal_Click(sender, e);
+            if (e.KeyCode == Keys.Multiply)
+                mul_Click(sender, e);
+            if (e.KeyCode == Keys.Add)
+                add_Click(sender, e);
+            if (e.KeyCode == Keys.Subtract)
+                sub_Click(sender, e);
             if (e.KeyCode == Keys.NumPad0)
                 zero_Click(sender, e);
             if (e.KeyCode == Keys.NumPad1)
@@ -823,8 +870,6 @@ namespace WindowsFormsApplication3
                 eight_Click(sender, e);
             if (e.KeyCode == Keys.NumPad9)
                 nine_Click(sender, e);
-            if (e.KeyCode == Keys.Enter)
-                equal_Click(sender, e);
             if (e.KeyCode == Keys.D0)
                 zero_Click(sender, e);
             if (e.KeyCode == Keys.D1)
@@ -849,8 +894,12 @@ namespace WindowsFormsApplication3
 
         private void three_KeyDown_1(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-                equal_Click(sender, e);
+            if (e.KeyCode == Keys.Multiply)
+                mul_Click(sender, e);
+            if (e.KeyCode == Keys.Add)
+                add_Click(sender, e);
+            if (e.KeyCode == Keys.Subtract)
+                sub_Click(sender, e);
             if (e.KeyCode == Keys.NumPad0)
                 zero_Click(sender, e);
             if (e.KeyCode == Keys.NumPad1)
@@ -871,8 +920,6 @@ namespace WindowsFormsApplication3
                 eight_Click(sender, e);
             if (e.KeyCode == Keys.NumPad9)
                 nine_Click(sender, e);
-            if (e.KeyCode == Keys.Enter)
-                equal_Click(sender, e);
             if (e.KeyCode == Keys.D0)
                 zero_Click(sender, e);
             if (e.KeyCode == Keys.D1)
@@ -897,8 +944,12 @@ namespace WindowsFormsApplication3
 
         private void two_KeyDown_1(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-                equal_Click(sender, e);
+            if (e.KeyCode == Keys.Multiply)
+                mul_Click(sender, e);
+            if (e.KeyCode == Keys.Add)
+                add_Click(sender, e);
+            if (e.KeyCode == Keys.Subtract)
+                sub_Click(sender, e);
             if (e.KeyCode == Keys.NumPad0)
                 zero_Click(sender, e);
             if (e.KeyCode == Keys.NumPad1)
@@ -919,8 +970,6 @@ namespace WindowsFormsApplication3
                 eight_Click(sender, e);
             if (e.KeyCode == Keys.NumPad9)
                 nine_Click(sender, e);
-            if (e.KeyCode == Keys.Enter)
-                equal_Click(sender, e);
             if (e.KeyCode == Keys.D0)
                 zero_Click(sender, e);
             if (e.KeyCode == Keys.D1)
@@ -945,8 +994,12 @@ namespace WindowsFormsApplication3
 
         private void one_KeyDown_1(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-                equal_Click(sender, e);
+            if (e.KeyCode == Keys.Multiply)
+                mul_Click(sender, e);
+            if (e.KeyCode == Keys.Add)
+                add_Click(sender, e);
+            if (e.KeyCode == Keys.Subtract)
+                sub_Click(sender, e);
             if (e.KeyCode == Keys.NumPad0)
                 zero_Click(sender, e);
             if (e.KeyCode == Keys.NumPad1)
@@ -967,8 +1020,6 @@ namespace WindowsFormsApplication3
                 eight_Click(sender, e);
             if (e.KeyCode == Keys.NumPad9)
                 nine_Click(sender, e);
-            if (e.KeyCode == Keys.Enter)
-                equal_Click(sender, e);
             if (e.KeyCode == Keys.D0)
                 zero_Click(sender, e);
             if (e.KeyCode == Keys.D1)
@@ -993,8 +1044,12 @@ namespace WindowsFormsApplication3
 
         private void zero_KeyDown_1(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-                equal_Click(sender, e);
+            if (e.KeyCode == Keys.Multiply)
+                mul_Click(sender, e);
+            if (e.KeyCode == Keys.Add)
+                add_Click(sender, e);
+            if (e.KeyCode == Keys.Subtract)
+                sub_Click(sender, e);
             if (e.KeyCode == Keys.NumPad0)
                 zero_Click(sender, e);
             if (e.KeyCode == Keys.NumPad1)
@@ -1015,8 +1070,6 @@ namespace WindowsFormsApplication3
                 eight_Click(sender, e);
             if (e.KeyCode == Keys.NumPad9)
                 nine_Click(sender, e);
-            if (e.KeyCode == Keys.Enter)
-                equal_Click(sender, e);
             if (e.KeyCode == Keys.D0)
                 zero_Click(sender, e);
             if (e.KeyCode == Keys.D1)

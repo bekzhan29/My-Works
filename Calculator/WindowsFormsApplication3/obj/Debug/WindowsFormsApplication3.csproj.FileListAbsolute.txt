@@ -7,3 +7,12 @@ c:\users\бекжан\documents\visual studio 2015\Projects\WindowsFormsApplicat
 c:\users\бекжан\documents\visual studio 2015\Projects\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.exe
 c:\users\бекжан\documents\visual studio 2015\Projects\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.pdb
 c:\users\бекжан\documents\visual studio 2015\Projects\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.calc.resources
+C:\Users\Бекжан\Desktop\My-Works\Calculator\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe.config
+C:\Users\Бекжан\Desktop\My-Works\Calculator\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.exe
+C:\Users\Бекжан\Desktop\My-Works\Calculator\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.pdb
+C:\Users\Бекжан\Desktop\My-Works\Calculator\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe
+C:\Users\Бекжан\Desktop\My-Works\Calculator\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.pdb
+C:\Users\Бекжан\Desktop\My-Works\Calculator\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.csprojResolveAssemblyReference.cache
+C:\Users\Бекжан\Desktop\My-Works\Calculator\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.calc.resources
+C:\Users\Бекжан\Desktop\My-Works\Calculator\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.Properties.Resources.resources
+C:\Users\Бекжан\Desktop\My-Works\Calculator\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.csproj.GenerateResource.Cache
