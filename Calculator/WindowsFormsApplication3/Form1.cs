@@ -16,15 +16,11 @@ namespace WindowsFormsApplication3
         {
             public int[] a = new int[1111];
             public int size;
-            public static bigint f(string s)
+            public void f(string s)
             {
-                bigint a = new bigint();
-                a.size = s.Length;
-                for (int i = 1; i <= a.size; i++)
-                {
-                    a.a[a.size - i + 1] = s[i - 1] - 48;
-                }
-                return a;
+                size = s.Length;
+                for (int i = 1; i <= size; i++)
+                    a[size - i + 1] = s[i - 1] - 48;
             }
             public static bigint operator +(bigint a, bigint b)
             {
@@ -172,34 +168,35 @@ namespace WindowsFormsApplication3
 
         private void clear_Click(object sender, EventArgs e)
         {
-            last = bigint.f("0");
+            last.f("0");
             calctxt.Text = "0";
         }
 
         private void add_Click(object sender, EventArgs e)
         {
-            last = bigint.f(calctxt.Text);
+            last.f(calctxt.Text);
             oper = 1;
             calctxt.Text = "0";
         }
         
         private void sub_Click(object sender, EventArgs e)
         {
-            last = bigint.f(calctxt.Text);
+            last.f(calctxt.Text);
             oper = 2;
             calctxt.Text = "0";
         }
 
         private void mul_Click(object sender, EventArgs e)
         {
-            last = bigint.f(calctxt.Text);
+            last.f(calctxt.Text);
             oper = 3;
             calctxt.Text = "0";
         }
 
         private void equal_Click(object sender, EventArgs e)
         {
-            bigint b = bigint.f(calctxt.Text);
+            bigint b = new bigint();
+            b.f(calctxt.Text);
             if (oper == 1)
             {
                 last += b;
