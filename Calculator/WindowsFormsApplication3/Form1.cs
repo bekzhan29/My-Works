@@ -242,7 +242,7 @@ namespace WindowsFormsApplication3
             oper = 4;
         }
 
-        private void calc_KeyDown(object sender, KeyEventArgs e)
+        private void foreachkeydown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Multiply)
                 mul_Click(sender, e);
@@ -290,806 +290,91 @@ namespace WindowsFormsApplication3
                 eight_Click(sender, e);
             if (e.KeyCode == Keys.D9)
                 nine_Click(sender, e);
+        }
+
+        private void calc_KeyDown(object sender, KeyEventArgs e)
+        {
+            foreachkeydown(sender, e);
         }
 
         private void calctxt_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Multiply)
-                mul_Click(sender, e);
-            if (e.KeyCode == Keys.Add)
-                add_Click(sender, e);
-            if (e.KeyCode == Keys.Subtract)
-                sub_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad0)
-                zero_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad1)
-                one_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad2)
-                two_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad3)
-                three_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad4)
-                four_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad5)
-                five_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad6)
-                six_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad7)
-                seven_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad8)
-                eight_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad9)
-                nine_Click(sender, e);
-            if (e.KeyCode == Keys.D0)
-                zero_Click(sender, e);
-            if (e.KeyCode == Keys.D1)
-                one_Click(sender, e);
-            if (e.KeyCode == Keys.D2)
-                two_Click(sender, e);
-            if (e.KeyCode == Keys.D3)
-                three_Click(sender, e);
-            if (e.KeyCode == Keys.D4)
-                four_Click(sender, e);
-            if (e.KeyCode == Keys.D5)
-                five_Click(sender, e);
-            if (e.KeyCode == Keys.D6)
-                six_Click(sender, e);
-            if (e.KeyCode == Keys.D7)
-                seven_Click(sender, e);
-            if (e.KeyCode == Keys.D8)
-                eight_Click(sender, e);
-            if (e.KeyCode == Keys.D9)
-                nine_Click(sender, e);
+            foreachkeydown(sender, e);
         }
 
         private void clear_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Multiply)
-                mul_Click(sender, e);
-            if (e.KeyCode == Keys.Add)
-                add_Click(sender, e);
-            if (e.KeyCode == Keys.Subtract)
-                sub_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad0)
-                zero_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad1)
-                one_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad2)
-                two_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad3)
-                three_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad4)
-                four_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad5)
-                five_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad6)
-                six_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad7)
-                seven_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad8)
-                eight_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad9)
-                nine_Click(sender, e);
-            if (e.KeyCode == Keys.D0)
-                zero_Click(sender, e);
-            if (e.KeyCode == Keys.D1)
-                one_Click(sender, e);
-            if (e.KeyCode == Keys.D2)
-                two_Click(sender, e);
-            if (e.KeyCode == Keys.D3)
-                three_Click(sender, e);
-            if (e.KeyCode == Keys.D4)
-                four_Click(sender, e);
-            if (e.KeyCode == Keys.D5)
-                five_Click(sender, e);
-            if (e.KeyCode == Keys.D6)
-                six_Click(sender, e);
-            if (e.KeyCode == Keys.D7)
-                seven_Click(sender, e);
-            if (e.KeyCode == Keys.D8)
-                eight_Click(sender, e);
-            if (e.KeyCode == Keys.D9)
-                nine_Click(sender, e);
+            foreachkeydown(sender, e);
         }
 
         private void mul_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Multiply)
-                mul_Click(sender, e);
-            if (e.KeyCode == Keys.Add)
-                add_Click(sender, e);
-            if (e.KeyCode == Keys.Subtract)
-                sub_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad0)
-                zero_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad1)
-                one_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad2)
-                two_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad3)
-                three_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad4)
-                four_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad5)
-                five_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad6)
-                six_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad7)
-                seven_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad8)
-                eight_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad9)
-                nine_Click(sender, e);
-            if (e.KeyCode == Keys.D0)
-                zero_Click(sender, e);
-            if (e.KeyCode == Keys.D1)
-                one_Click(sender, e);
-            if (e.KeyCode == Keys.D2)
-                two_Click(sender, e);
-            if (e.KeyCode == Keys.D3)
-                three_Click(sender, e);
-            if (e.KeyCode == Keys.D4)
-                four_Click(sender, e);
-            if (e.KeyCode == Keys.D5)
-                five_Click(sender, e);
-            if (e.KeyCode == Keys.D6)
-                six_Click(sender, e);
-            if (e.KeyCode == Keys.D7)
-                seven_Click(sender, e);
-            if (e.KeyCode == Keys.D8)
-                eight_Click(sender, e);
-            if (e.KeyCode == Keys.D9)
-                nine_Click(sender, e);
+            foreachkeydown(sender, e);
         }
 
         private void sub_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Multiply)
-                mul_Click(sender, e);
-            if (e.KeyCode == Keys.Add)
-                add_Click(sender, e);
-            if (e.KeyCode == Keys.Subtract)
-                sub_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad0)
-                zero_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad1)
-                one_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad2)
-                two_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad3)
-                three_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad4)
-                four_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad5)
-                five_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad6)
-                six_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad7)
-                seven_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad8)
-                eight_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad9)
-                nine_Click(sender, e);
-            if (e.KeyCode == Keys.D0)
-                zero_Click(sender, e);
-            if (e.KeyCode == Keys.D1)
-                one_Click(sender, e);
-            if (e.KeyCode == Keys.D2)
-                two_Click(sender, e);
-            if (e.KeyCode == Keys.D3)
-                three_Click(sender, e);
-            if (e.KeyCode == Keys.D4)
-                four_Click(sender, e);
-            if (e.KeyCode == Keys.D5)
-                five_Click(sender, e);
-            if (e.KeyCode == Keys.D6)
-                six_Click(sender, e);
-            if (e.KeyCode == Keys.D7)
-                seven_Click(sender, e);
-            if (e.KeyCode == Keys.D8)
-                eight_Click(sender, e);
-            if (e.KeyCode == Keys.D9)
-                nine_Click(sender, e);
+            foreachkeydown(sender, e);
         }
 
         private void seven_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Multiply)
-                mul_Click(sender, e);
-            if (e.KeyCode == Keys.Add)
-                add_Click(sender, e);
-            if (e.KeyCode == Keys.Subtract)
-                sub_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad0)
-                zero_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad1)
-                one_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad2)
-                two_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad3)
-                three_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad4)
-                four_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad5)
-                five_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad6)
-                six_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad7)
-                seven_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad8)
-                eight_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad9)
-                nine_Click(sender, e);
-            if (e.KeyCode == Keys.D0)
-                zero_Click(sender, e);
-            if (e.KeyCode == Keys.D1)
-                one_Click(sender, e);
-            if (e.KeyCode == Keys.D2)
-                two_Click(sender, e);
-            if (e.KeyCode == Keys.D3)
-                three_Click(sender, e);
-            if (e.KeyCode == Keys.D4)
-                four_Click(sender, e);
-            if (e.KeyCode == Keys.D5)
-                five_Click(sender, e);
-            if (e.KeyCode == Keys.D6)
-                six_Click(sender, e);
-            if (e.KeyCode == Keys.D7)
-                seven_Click(sender, e);
-            if (e.KeyCode == Keys.D8)
-                eight_Click(sender, e);
-            if (e.KeyCode == Keys.D9)
-                nine_Click(sender, e);
+            foreachkeydown(sender, e);
         }
 
         private void eight_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Multiply)
-                mul_Click(sender, e);
-            if (e.KeyCode == Keys.Add)
-                add_Click(sender, e);
-            if (e.KeyCode == Keys.Subtract)
-                sub_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad0)
-                zero_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad1)
-                one_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad2)
-                two_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad3)
-                three_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad4)
-                four_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad5)
-                five_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad6)
-                six_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad7)
-                seven_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad8)
-                eight_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad9)
-                nine_Click(sender, e);
-            if (e.KeyCode == Keys.D0)
-                zero_Click(sender, e);
-            if (e.KeyCode == Keys.D1)
-                one_Click(sender, e);
-            if (e.KeyCode == Keys.D2)
-                two_Click(sender, e);
-            if (e.KeyCode == Keys.D3)
-                three_Click(sender, e);
-            if (e.KeyCode == Keys.D4)
-                four_Click(sender, e);
-            if (e.KeyCode == Keys.D5)
-                five_Click(sender, e);
-            if (e.KeyCode == Keys.D6)
-                six_Click(sender, e);
-            if (e.KeyCode == Keys.D7)
-                seven_Click(sender, e);
-            if (e.KeyCode == Keys.D8)
-                eight_Click(sender, e);
-            if (e.KeyCode == Keys.D9)
-                nine_Click(sender, e);
+            foreachkeydown(sender, e);
         }
 
         private void add_KeyDown_1(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Multiply)
-                mul_Click(sender, e);
-            if (e.KeyCode == Keys.Add)
-                add_Click(sender, e);
-            if (e.KeyCode == Keys.Subtract)
-                sub_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad0)
-                zero_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad1)
-                one_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad2)
-                two_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad3)
-                three_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad4)
-                four_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad5)
-                five_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad6)
-                six_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad7)
-                seven_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad8)
-                eight_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad9)
-                nine_Click(sender, e);
-            if (e.KeyCode == Keys.D0)
-                zero_Click(sender, e);
-            if (e.KeyCode == Keys.D1)
-                one_Click(sender, e);
-            if (e.KeyCode == Keys.D2)
-                two_Click(sender, e);
-            if (e.KeyCode == Keys.D3)
-                three_Click(sender, e);
-            if (e.KeyCode == Keys.D4)
-                four_Click(sender, e);
-            if (e.KeyCode == Keys.D5)
-                five_Click(sender, e);
-            if (e.KeyCode == Keys.D6)
-                six_Click(sender, e);
-            if (e.KeyCode == Keys.D7)
-                seven_Click(sender, e);
-            if (e.KeyCode == Keys.D8)
-                eight_Click(sender, e);
-            if (e.KeyCode == Keys.D9)
-                nine_Click(sender, e);
+            foreachkeydown(sender, e);
         }
 
         private void equal_KeyDown_1(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Multiply)
-                mul_Click(sender, e);
-            if (e.KeyCode == Keys.Add)
-                add_Click(sender, e);
-            if (e.KeyCode == Keys.Subtract)
-                sub_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad0)
-                zero_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad1)
-                one_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad2)
-                two_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad3)
-                three_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad4)
-                four_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad5)
-                five_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad6)
-                six_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad7)
-                seven_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad8)
-                eight_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad9)
-                nine_Click(sender, e);
-            if (e.KeyCode == Keys.D0)
-                zero_Click(sender, e);
-            if (e.KeyCode == Keys.D1)
-                one_Click(sender, e);
-            if (e.KeyCode == Keys.D2)
-                two_Click(sender, e);
-            if (e.KeyCode == Keys.D3)
-                three_Click(sender, e);
-            if (e.KeyCode == Keys.D4)
-                four_Click(sender, e);
-            if (e.KeyCode == Keys.D5)
-                five_Click(sender, e);
-            if (e.KeyCode == Keys.D6)
-                six_Click(sender, e);
-            if (e.KeyCode == Keys.D7)
-                seven_Click(sender, e);
-            if (e.KeyCode == Keys.D8)
-                eight_Click(sender, e);
-            if (e.KeyCode == Keys.D9)
-                nine_Click(sender, e);
+            foreachkeydown(sender, e);
         }
 
         private void nine_KeyDown_1(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Multiply)
-                mul_Click(sender, e);
-            if (e.KeyCode == Keys.Add)
-                add_Click(sender, e);
-            if (e.KeyCode == Keys.Subtract)
-                sub_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad0)
-                zero_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad1)
-                one_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad2)
-                two_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad3)
-                three_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad4)
-                four_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad5)
-                five_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad6)
-                six_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad7)
-                seven_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad8)
-                eight_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad9)
-                nine_Click(sender, e);
-            if (e.KeyCode == Keys.D0)
-                zero_Click(sender, e);
-            if (e.KeyCode == Keys.D1)
-                one_Click(sender, e);
-            if (e.KeyCode == Keys.D2)
-                two_Click(sender, e);
-            if (e.KeyCode == Keys.D3)
-                three_Click(sender, e);
-            if (e.KeyCode == Keys.D4)
-                four_Click(sender, e);
-            if (e.KeyCode == Keys.D5)
-                five_Click(sender, e);
-            if (e.KeyCode == Keys.D6)
-                six_Click(sender, e);
-            if (e.KeyCode == Keys.D7)
-                seven_Click(sender, e);
-            if (e.KeyCode == Keys.D8)
-                eight_Click(sender, e);
-            if (e.KeyCode == Keys.D9)
-                nine_Click(sender, e);
+            foreachkeydown(sender, e);
         }
 
         private void six_KeyDown_1(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Multiply)
-                mul_Click(sender, e);
-            if (e.KeyCode == Keys.Add)
-                add_Click(sender, e);
-            if (e.KeyCode == Keys.Subtract)
-                sub_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad0)
-                zero_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad1)
-                one_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad2)
-                two_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad3)
-                three_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad4)
-                four_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad5)
-                five_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad6)
-                six_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad7)
-                seven_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad8)
-                eight_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad9)
-                nine_Click(sender, e);
-            if (e.KeyCode == Keys.D0)
-                zero_Click(sender, e);
-            if (e.KeyCode == Keys.D1)
-                one_Click(sender, e);
-            if (e.KeyCode == Keys.D2)
-                two_Click(sender, e);
-            if (e.KeyCode == Keys.D3)
-                three_Click(sender, e);
-            if (e.KeyCode == Keys.D4)
-                four_Click(sender, e);
-            if (e.KeyCode == Keys.D5)
-                five_Click(sender, e);
-            if (e.KeyCode == Keys.D6)
-                six_Click(sender, e);
-            if (e.KeyCode == Keys.D7)
-                seven_Click(sender, e);
-            if (e.KeyCode == Keys.D8)
-                eight_Click(sender, e);
-            if (e.KeyCode == Keys.D9)
-                nine_Click(sender, e);
+            foreachkeydown(sender, e);
         }
 
         private void five_KeyDown_1(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Multiply)
-                mul_Click(sender, e);
-            if (e.KeyCode == Keys.Add)
-                add_Click(sender, e);
-            if (e.KeyCode == Keys.Subtract)
-                sub_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad0)
-                zero_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad1)
-                one_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad2)
-                two_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad3)
-                three_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad4)
-                four_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad5)
-                five_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad6)
-                six_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad7)
-                seven_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad8)
-                eight_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad9)
-                nine_Click(sender, e);
-            if (e.KeyCode == Keys.D0)
-                zero_Click(sender, e);
-            if (e.KeyCode == Keys.D1)
-                one_Click(sender, e);
-            if (e.KeyCode == Keys.D2)
-                two_Click(sender, e);
-            if (e.KeyCode == Keys.D3)
-                three_Click(sender, e);
-            if (e.KeyCode == Keys.D4)
-                four_Click(sender, e);
-            if (e.KeyCode == Keys.D5)
-                five_Click(sender, e);
-            if (e.KeyCode == Keys.D6)
-                six_Click(sender, e);
-            if (e.KeyCode == Keys.D7)
-                seven_Click(sender, e);
-            if (e.KeyCode == Keys.D8)
-                eight_Click(sender, e);
-            if (e.KeyCode == Keys.D9)
-                nine_Click(sender, e);
+            foreachkeydown(sender, e);
         }
 
         private void four_KeyDown_1(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Multiply)
-                mul_Click(sender, e);
-            if (e.KeyCode == Keys.Add)
-                add_Click(sender, e);
-            if (e.KeyCode == Keys.Subtract)
-                sub_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad0)
-                zero_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad1)
-                one_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad2)
-                two_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad3)
-                three_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad4)
-                four_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad5)
-                five_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad6)
-                six_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad7)
-                seven_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad8)
-                eight_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad9)
-                nine_Click(sender, e);
-            if (e.KeyCode == Keys.D0)
-                zero_Click(sender, e);
-            if (e.KeyCode == Keys.D1)
-                one_Click(sender, e);
-            if (e.KeyCode == Keys.D2)
-                two_Click(sender, e);
-            if (e.KeyCode == Keys.D3)
-                three_Click(sender, e);
-            if (e.KeyCode == Keys.D4)
-                four_Click(sender, e);
-            if (e.KeyCode == Keys.D5)
-                five_Click(sender, e);
-            if (e.KeyCode == Keys.D6)
-                six_Click(sender, e);
-            if (e.KeyCode == Keys.D7)
-                seven_Click(sender, e);
-            if (e.KeyCode == Keys.D8)
-                eight_Click(sender, e);
-            if (e.KeyCode == Keys.D9)
-                nine_Click(sender, e);
+            foreachkeydown(sender, e);
         }
 
         private void three_KeyDown_1(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Multiply)
-                mul_Click(sender, e);
-            if (e.KeyCode == Keys.Add)
-                add_Click(sender, e);
-            if (e.KeyCode == Keys.Subtract)
-                sub_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad0)
-                zero_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad1)
-                one_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad2)
-                two_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad3)
-                three_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad4)
-                four_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad5)
-                five_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad6)
-                six_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad7)
-                seven_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad8)
-                eight_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad9)
-                nine_Click(sender, e);
-            if (e.KeyCode == Keys.D0)
-                zero_Click(sender, e);
-            if (e.KeyCode == Keys.D1)
-                one_Click(sender, e);
-            if (e.KeyCode == Keys.D2)
-                two_Click(sender, e);
-            if (e.KeyCode == Keys.D3)
-                three_Click(sender, e);
-            if (e.KeyCode == Keys.D4)
-                four_Click(sender, e);
-            if (e.KeyCode == Keys.D5)
-                five_Click(sender, e);
-            if (e.KeyCode == Keys.D6)
-                six_Click(sender, e);
-            if (e.KeyCode == Keys.D7)
-                seven_Click(sender, e);
-            if (e.KeyCode == Keys.D8)
-                eight_Click(sender, e);
-            if (e.KeyCode == Keys.D9)
-                nine_Click(sender, e);
+            foreachkeydown(sender, e);
         }
 
         private void two_KeyDown_1(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Multiply)
-                mul_Click(sender, e);
-            if (e.KeyCode == Keys.Add)
-                add_Click(sender, e);
-            if (e.KeyCode == Keys.Subtract)
-                sub_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad0)
-                zero_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad1)
-                one_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad2)
-                two_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad3)
-                three_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad4)
-                four_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad5)
-                five_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad6)
-                six_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad7)
-                seven_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad8)
-                eight_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad9)
-                nine_Click(sender, e);
-            if (e.KeyCode == Keys.D0)
-                zero_Click(sender, e);
-            if (e.KeyCode == Keys.D1)
-                one_Click(sender, e);
-            if (e.KeyCode == Keys.D2)
-                two_Click(sender, e);
-            if (e.KeyCode == Keys.D3)
-                three_Click(sender, e);
-            if (e.KeyCode == Keys.D4)
-                four_Click(sender, e);
-            if (e.KeyCode == Keys.D5)
-                five_Click(sender, e);
-            if (e.KeyCode == Keys.D6)
-                six_Click(sender, e);
-            if (e.KeyCode == Keys.D7)
-                seven_Click(sender, e);
-            if (e.KeyCode == Keys.D8)
-                eight_Click(sender, e);
-            if (e.KeyCode == Keys.D9)
-                nine_Click(sender, e);
+            foreachkeydown(sender, e);
         }
 
         private void one_KeyDown_1(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Multiply)
-                mul_Click(sender, e);
-            if (e.KeyCode == Keys.Add)
-                add_Click(sender, e);
-            if (e.KeyCode == Keys.Subtract)
-                sub_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad0)
-                zero_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad1)
-                one_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad2)
-                two_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad3)
-                three_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad4)
-                four_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad5)
-                five_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad6)
-                six_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad7)
-                seven_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad8)
-                eight_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad9)
-                nine_Click(sender, e);
-            if (e.KeyCode == Keys.D0)
-                zero_Click(sender, e);
-            if (e.KeyCode == Keys.D1)
-                one_Click(sender, e);
-            if (e.KeyCode == Keys.D2)
-                two_Click(sender, e);
-            if (e.KeyCode == Keys.D3)
-                three_Click(sender, e);
-            if (e.KeyCode == Keys.D4)
-                four_Click(sender, e);
-            if (e.KeyCode == Keys.D5)
-                five_Click(sender, e);
-            if (e.KeyCode == Keys.D6)
-                six_Click(sender, e);
-            if (e.KeyCode == Keys.D7)
-                seven_Click(sender, e);
-            if (e.KeyCode == Keys.D8)
-                eight_Click(sender, e);
-            if (e.KeyCode == Keys.D9)
-                nine_Click(sender, e);
+            foreachkeydown(sender, e);
         }
 
         private void zero_KeyDown_1(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Multiply)
-                mul_Click(sender, e);
-            if (e.KeyCode == Keys.Add)
-                add_Click(sender, e);
-            if (e.KeyCode == Keys.Subtract)
-                sub_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad0)
-                zero_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad1)
-                one_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad2)
-                two_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad3)
-                three_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad4)
-                four_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad5)
-                five_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad6)
-                six_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad7)
-                seven_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad8)
-                eight_Click(sender, e);
-            if (e.KeyCode == Keys.NumPad9)
-                nine_Click(sender, e);
-            if (e.KeyCode == Keys.D0)
-                zero_Click(sender, e);
-            if (e.KeyCode == Keys.D1)
-                one_Click(sender, e);
-            if (e.KeyCode == Keys.D2)
-                two_Click(sender, e);
-            if (e.KeyCode == Keys.D3)
-                three_Click(sender, e);
-            if (e.KeyCode == Keys.D4)
-                four_Click(sender, e);
-            if (e.KeyCode == Keys.D5)
-                five_Click(sender, e);
-            if (e.KeyCode == Keys.D6)
-                six_Click(sender, e);
-            if (e.KeyCode == Keys.D7)
-                seven_Click(sender, e);
-            if (e.KeyCode == Keys.D8)
-                eight_Click(sender, e);
-            if (e.KeyCode == Keys.D9)
-                nine_Click(sender, e);
+            foreachkeydown(sender, e);
         }
     }
 }
