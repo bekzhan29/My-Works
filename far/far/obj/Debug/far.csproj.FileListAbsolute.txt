@@ -1,0 +1,6 @@
+c:\users\бекжан\documents\visual studio 2015\Projects\far\far\bin\Debug\far.exe.config
+c:\users\бекжан\documents\visual studio 2015\Projects\far\far\bin\Debug\far.exe
+c:\users\бекжан\documents\visual studio 2015\Projects\far\far\bin\Debug\far.pdb
+c:\users\бекжан\documents\visual studio 2015\Projects\far\far\obj\Debug\far.csprojResolveAssemblyReference.cache
+c:\users\бекжан\documents\visual studio 2015\Projects\far\far\obj\Debug\far.exe
+c:\users\бекжан\documents\visual studio 2015\Projects\far\far\obj\Debug\far.pdb
