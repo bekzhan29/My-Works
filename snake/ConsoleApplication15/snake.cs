@@ -16,7 +16,18 @@ namespace ConsoleApplication15
             ch = '⌂';
             telo = new List<pair>(1111);
         }
-        public void move(int dx, int dy)
+        public void nariss()
+        {
+            if (last.x + last.y >= 0)
+            {
+                Console.SetCursorPosition(last.x, last.y);
+                Console.Write(" ");
+            }
+            Console.SetCursorPosition(telo[0].x, telo[0].y);
+            Console.Write(ch);
+            Console.SetCursorPosition(59, 29);
+        }
+        public int move(int dx, int dy)
         {
             last.x = telo[telo.Count - 1].x;
             last.y = telo[telo.Count - 1].y;
@@ -27,14 +38,8 @@ namespace ConsoleApplication15
             }
             telo[0].x += dx;
             telo[0].y += dy;
-            if (telo[0].x == 60)
-                telo[0].x = 0;
-            if (telo[0].x < 0)
-                telo[0].x = 59;
-            if (telo[0].y == 30)
-                telo[0].y = 0;
-            if (telo[0].y < 0)
-                telo[0].y = 29;
+            telo[0].x = (telo[0].x + 60) % 60;
+            telo[0].y = (telo[0].y + 30) % 30;
             for (int i = 1; i < telo.Count; i++)
             {
                 if (telo[0].x == telo[i].x && telo[0].y == telo[i].y)
@@ -42,11 +47,14 @@ namespace ConsoleApplication15
                     Console.Clear();
                     Console.WriteLine("Game Over");
                     while (telo.Count > 0)
-                        telo.RemoveAt(telo.Count-1);
+                        telo.RemoveAt(0);
                     telo.Add(new pair(0, 0));
                     Console.ReadKey();
+                    Console.Clear();
+                    return 0;
                 }
             }
+            return 1;
         }
     }
 }

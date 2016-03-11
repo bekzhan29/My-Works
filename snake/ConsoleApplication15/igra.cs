@@ -38,6 +38,9 @@ namespace ConsoleApplication15
                     if (cnt == 0)
                         break;
                 }
+                jilan.last.x = jilan.last.y = -1;
+                alma.naris();
+                jilan.nariss();
             }
         }
     }

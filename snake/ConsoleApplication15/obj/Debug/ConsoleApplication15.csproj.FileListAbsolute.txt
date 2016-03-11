@@ -4,3 +4,9 @@ c:\users\бекжан\documents\visual studio 2015\Projects\ConsoleApplication15
 c:\users\бекжан\documents\visual studio 2015\Projects\ConsoleApplication15\ConsoleApplication15\obj\Debug\ConsoleApplication15.csprojResolveAssemblyReference.cache
 c:\users\бекжан\documents\visual studio 2015\Projects\ConsoleApplication15\ConsoleApplication15\obj\Debug\ConsoleApplication15.exe
 c:\users\бекжан\documents\visual studio 2015\Projects\ConsoleApplication15\ConsoleApplication15\obj\Debug\ConsoleApplication15.pdb
+C:\Users\Бекжан\Desktop\My-Works\snake\ConsoleApplication15\bin\Debug\ConsoleApplication15.exe.config
+C:\Users\Бекжан\Desktop\My-Works\snake\ConsoleApplication15\obj\Debug\ConsoleApplication15.exe
+C:\Users\Бекжан\Desktop\My-Works\snake\ConsoleApplication15\obj\Debug\ConsoleApplication15.pdb
+C:\Users\Бекжан\Desktop\My-Works\snake\ConsoleApplication15\bin\Debug\ConsoleApplication15.exe
+C:\Users\Бекжан\Desktop\My-Works\snake\ConsoleApplication15\bin\Debug\ConsoleApplication15.pdb
+C:\Users\Бекжан\Desktop\My-Works\snake\ConsoleApplication15\obj\Debug\ConsoleApplication15.csprojResolveAssemblyReference.cache

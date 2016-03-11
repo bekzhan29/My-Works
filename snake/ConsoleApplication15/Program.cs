@@ -12,23 +12,24 @@ namespace ConsoleApplication15
         {
             Console.SetWindowSize(60, 30);
             igra igra = new igra();
+            int chec = 0;
             igra.jilan.naris();
             igra.alma.naris();
             while (igra.vigre == 1)
             {
                 ConsoleKeyInfo key = Console.ReadKey();
                 if (key.Key.ToString() == "UpArrow")
-                    igra.jilan.move(0, -1);
+                    chec = igra.jilan.move(0, -1);
                 if (key.Key.ToString() == "DownArrow")
-                    igra.jilan.move(0, 1);
+                    chec = igra.jilan.move(0, 1);
                 if (key.Key.ToString() == "LeftArrow")
-                    igra.jilan.move(-1, 0);
+                    chec = igra.jilan.move(-1, 0);
                 if (key.Key.ToString() == "RightArrow")
-                    igra.jilan.move(1, 0);
+                    chec = igra.jilan.move(1, 0);
                 igra.check();
-                Console.Clear();
-                igra.jilan.naris();
-                igra.alma.naris();
+                igra.jilan.nariss();
+                if (chec == 0)
+                    igra.alma.naris();
             }
             Console.ReadKey();
         }
